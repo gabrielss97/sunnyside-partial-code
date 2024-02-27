@@ -1,0 +1,78 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+
+.section-one {
+  background: hsl(34, 100%, 99%);
+
+  @include desk {
+    &__img {
+      width: 50%;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    @include desk {
+      flex-direction: row;
+    }
+  }
+
+  .text {
+    padding: 72px 24px;
+
+    @include desk {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 72px 100px;
+      width: 50%;
+
+      &--left {
+        order: -1;
+      }
+
+      h3,
+      a,
+      p {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+
+  h3 {
+    color: $titles-blue;
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  p {
+    color: $d-grayish-blue;
+    text-align: center;
+    font-family: "Barlow";
+    line-height: 30px;
+    margin-top: 24px;
+  }
+
+  a {
+    text-decoration: underline $learn-more-yellow 4px;
+    color: $titles-blue;
+    font-family: "Fraunces";
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .red {
+    text-decoration: underline $learn-more-red 4px;
+  }
+}

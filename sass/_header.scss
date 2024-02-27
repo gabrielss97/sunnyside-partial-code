@@ -1,0 +1,89 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.5rem 1.5rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desk {
+    background-image: url("../images/desktop/image-header.jpg");
+    padding: 2rem 2rem 16rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  h1 {
+    color: $white;
+    text-align: center;
+    font-family: "Fraunces", serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 6.25px;
+    text-transform: uppercase;
+    margin-top: 88px;
+
+    @include desk {
+      margin-top: 105px;
+    }
+  }
+
+  .desktop-menu {
+    display: none;
+
+    @include desk {
+      display: block;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      gap: 47px;
+
+      li {
+      }
+
+      a {
+        color: $white;
+        font-family: "Barlow";
+        letter-spacing: -0.129px;
+        text-decoration: none;
+      }
+
+      button {
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 28px;
+        background: #77cdf5;
+      }
+
+      button > a {
+        color: $white;
+        font-family: "Fraunces";
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .mobile-menu {
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .arrow-down {
+    @include desk {
+      margin-top: 90px;
+    }
+  }
+}

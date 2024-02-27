@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.5rem 1.5rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+    padding: 2rem 2rem 16rem;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header h1 {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 6.25px;
+  text-transform: uppercase;
+  margin-top: 88px;
+}
+@media (min-width: 1200px) {
+  header h1 {
+    margin-top: 105px;
+  }
+}
+header .desktop-menu {
+  display: none;
+}
+@media (min-width: 1200px) {
+  header .desktop-menu {
+    display: block;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 47px;
+  }
+  header .desktop-menu a {
+    color: hsl(0, 0%, 100%);
+    font-family: "Barlow";
+    letter-spacing: -0.129px;
+    text-decoration: none;
+  }
+  header .desktop-menu button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 28px;
+    background: #77cdf5;
+  }
+  header .desktop-menu button > a {
+    color: hsl(0, 0%, 100%);
+    font-family: "Fraunces";
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 1200px) {
+  header .mobile-menu {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  header .arrow-down {
+    margin-top: 90px;
+  }
+}
+
+.section-one {
+  background: hsl(34, 100%, 99%);
+}
+@media (min-width: 1200px) {
+  .section-one__img {
+    width: 50%;
+  }
+}
+.section-one div {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .section-one div {
+    flex-direction: row;
+  }
+}
+.section-one .text {
+  padding: 72px 24px;
+}
+@media (min-width: 1200px) {
+  .section-one .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 72px 100px;
+    width: 50%;
+  }
+  .section-one .text--left {
+    order: -1;
+  }
+  .section-one .text h3,
+  .section-one .text a,
+  .section-one .text p {
+    text-align: left;
+    width: 100%;
+  }
+}
+.section-one h3 {
+  color: hsl(212, 27%, 19%);
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 2rem;
+  font-weight: 900;
+}
+.section-one p {
+  color: hsl(232, 10%, 55%);
+  text-align: center;
+  font-family: "Barlow";
+  line-height: 30px;
+  margin-top: 24px;
+}
+.section-one a {
+  text-decoration: underline hsl(51, 100%, 49%) 4px;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces";
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+}
+.section-one .red {
+  text-decoration: underline hsl(7, 99%, 70%) 4px;
+}
+
+.section-two h3 {
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.section-two p {
+  margin-top: 27px;
+  font-family: "Barlow";
+  font-size: 0.9rem;
+  line-height: 27px; /* 168.75% */
+  letter-spacing: -0.114px;
+  text-align: center;
+}
+.section-two__div-one {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 400px 24px 60px;
+}
+.section-two__div-one h3,
+.section-two__div-one p {
+  color: hsl(167, 40%, 24%);
+}
+.section-two__div-two {
+  background-image: url("../images/mobile/image-photography.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 400px 24px 60px;
+}
+.section-two__div-two h3,
+.section-two__div-two p {
+  color: hsl(198, 62%, 26%);
+}
+@media (min-width: 1200px) {
+  .section-two {
+    display: flex;
+    flex-direction: row;
+  }
+  .section-two__div-one {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-two__div-two {
+    background-image: url("../images/desktop/image-photography.jpg");
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-two p {
+    max-width: 339px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.125rem;
+}
+
+/*# sourceMappingURL=style.css.map */
